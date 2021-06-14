@@ -1,6 +1,7 @@
 import { Octokit } from "@octokit/core";
 import { Button, Form, Container, Alert } from "react-bootstrap";
 import Table from "./components/Table";
+import auth from "./auth.json"
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -12,7 +13,7 @@ function App() {
   const [error, setError] = useState(false);
 
   const octokit = new Octokit({
-    auth: `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`,
+    auth: auth.auth,
   });
 
   /**
